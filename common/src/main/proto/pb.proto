@@ -829,6 +829,7 @@ message PaymentAccountPayload {
         AdvancedCashAccountPayload advanced_cash_account_payload = 26;
         InstantCryptoCurrencyAccountPayload instant_crypto_currency_account_payload = 27;
         JapanBankAccountPayload japan_bank_account_payload = 28;
+        BrazilNuBankAccountPayload brazil_nubank_account_payload = 29;
     }
     map<string, string> exclude_from_json_data = 15;
 }
@@ -894,6 +895,11 @@ message JapanBankAccountPayload {
     string bank_account_type = 5;
     string bank_account_name = 6;
     string bank_account_number = 7;
+}
+
+message BrazilNuBankAccountPayload{
+    string reciever_email = 1;
+    string reciever_cpf = 2;
 }
 
 message SpecificBanksAccountPayload {
